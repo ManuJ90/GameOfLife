@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  background: #54007a;
+}
+
+h1 {
+  font-family: "Life Savers", cursive;
+  text-align: center;
+  font-size: 3rem;
+  color: #380052;
+  text-shadow: 5px 5px 6px #4b006d, -5px -5px 6px #5d0087;
+}
+
+.board {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+#canvas {
+  justify-content: center;
+  border-radius: 5px;
+  margin: 3rem;
+  align-items: center;
+  justify-content: center;
+  background: #690099;
+  box-shadow: -5px -5px 10px #470066, 5px 5px 10px #61008e;
+}
