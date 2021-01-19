@@ -3,6 +3,8 @@ const context = canvas.getContext("2d");
 const size = 1000;
 const scale = 4;
 const resolution = size / scale;
+const invert = 5000
+let intervalTime = invert / 150;
 
 let cells;
 
@@ -10,13 +12,61 @@ setup();
 randomCell();
 drawCells();
 
-setInterval(step, 20);
+var interval = setInterval(step, intervalTime);
 
-function setup() {
+const stopButton = document.querySelector(".stop");
+
+stopButton.onclick = function () {
+  clearInterval(interval);
+};
+
+const playButton = document.querySelector(".play");
+
+playButton.onclick = function () {
+  clearInterval(interval);
+  interval = setInterval(step, intervalTime);
+};
+
+const clearButton = document.querySelector(".clear");
+
+clearButton.onclick = function () {
+  clearInterval(interval);
+  clear();
+};
+
+const randomButton = document.querySelector(".random");
+
+randomButton.onclick = function () {
+  clearInterval(interval);
+  setup();
+  randomCell();
+  drawCells();
+  interval = setInterval(step, intervalTime);
+};
+
+const nextButton = document.querySelector(".next");
+
+nextButton.onclick = function () {
+  step();
+};
+
+const intervalSlider = document.querySelector('input[type="range"]');
+
+intervalSlider.onclick = function () {
+  clearInterval(interval);
+  intervalTime = invert / intervalSlider.value ;
+  interval = setInterval(step, intervalTime);
+};
+
+function clear() {
   canvas.width = size;
   canvas.height = size;
   context.scale(scale, scale);
   context.fillStyle = "#922020";
+}
+
+function setup() {
+  clear();
   cells = createCells();
 }
 
@@ -41,6 +91,7 @@ function randomCell() {
 }
 
 function drawCells() {
+  console.log("drawCells");
   context.fillStyle = "#922020";
   context.fillRect(0, 0, resolution, resolution);
   context.fillStyle = "#ff0000";
