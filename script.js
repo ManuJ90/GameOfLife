@@ -16,7 +16,7 @@ function setup() {
   canvas.width = size;
   canvas.height = size;
   context.scale(scale, scale);
-  context.fillStyle = "#ae00ff";
+  context.fillStyle = "#922020";
   cells = createCells();
 }
 
@@ -41,9 +41,9 @@ function randomCell() {
 }
 
 function drawCells() {
-  context.fillStyle = "#690099";
+  context.fillStyle = "#922020";
   context.fillRect(0, 0, resolution, resolution);
-  context.fillStyle = "#ae00ff";
+  context.fillStyle = "#ff0000";
   for (let y = 0; y < resolution; y++) {
     for (let x = 0; x < resolution; x++) {
       if (cells[x][y]) context.fillRect(x, y, 1, 1);

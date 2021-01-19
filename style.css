@@ -1,14 +1,14 @@
-body {
-  margin: 0;
-  background: #54007a;
+* {
+  margin: 0, auto;
+  background: #922020;
 }
 
-h1 {
-  font-family: "Life Savers", cursive;
+.title {
+  font-family: "Roboto Condensed", sans-serif;
   text-align: center;
-  font-size: 3rem;
-  color: #380052;
-  text-shadow: 5px 5px 6px #4b006d, -5px -5px 6px #5d0087;
+  color: #b12828;
+  text-shadow: 5px 5px 4px #7b1b1b, -5px -5px 4px #a92525;
+  margin-bottom: 2rem;
 }
 
 .board {
@@ -18,11 +18,64 @@ h1 {
 }
 
 #canvas {
-  justify-content: center;
+  margin-bottom: 3rem;
   border-radius: 5px;
-  margin: 3rem;
+  background: #670f0f;
+  display: block;
+  box-shadow: 5px 5px 13px #791b1b, -5px -5px 13px #ab2525;
+}
+
+.buttons {
   align-items: center;
   justify-content: center;
-  background: #690099;
-  box-shadow: -5px -5px 10px #470066, 5px 5px 10px #61008e;
+  display: flex;
+}
+
+.tempo {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.tempo-slider {
+  width: 50rem;
+  height: 1rem;
+  margin: 2rem;
+  outline: none;
+  -webkit-appearance: none;
+  background: linear-gradient(145deg, #831d1d, #9c2222);
+  box-shadow: 2px 2px 4px #861d1d, -2px -2px 4px #9e2323;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+.button {
+  outline: none;
+  color: #e76565;
+  width: 9rem;
+  height: 3rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  margin: 1%;
+  border: none;
+  border-radius: 10px;
+  background: #922020;
+  box-shadow: -5px -5px 15px #6b1717, 5px 5px 15px #b92929;
+  transition: all 0.3s ease;
+}
+
+.button.active {
+  outline: none;
+  box-shadow: inset -5px -5px 15px #6b1717, inset 5px 5px 15px #b92929;
+}
+
+.button:hover {
+  outline: none;
+  transform: scale(1.1);
+}
+
+.clearFix {
+  clear: both;
+  float: none;
 }

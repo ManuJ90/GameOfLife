@@ -1,26 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Game Of Life</title>
-    <link rel="shortcut icon" href="micro.png" type="image/x-icon" />
+    <title>Conway's Game Of Life</title>
+    <link rel="shortcut icon" href="pixel.png" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Life+Savers&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@300&display=swap"
+        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <h1>Game Of Life</h1>
+</head>
 
-      <div class="board">
-        <canvas id="canvas"></canvas>
-      </div>
+<body>
+    <div class="wrap">
+        <div class="title">
+            <h1>Conway's Game of Life</h1>
+        </div>
+
+        <div class="board">
+            <canvas id="canvas"></canvas>
+        </div>
+
+        <div class="tempo">
+            <input type="range" class="tempo-slider" max="300" min="10" value="150" />
+        </div>
+
+        <div class="buttons">
+            <button class="button play">
+                <i class="fas fa-play"></i>&nbsp&nbsp Play
+            </button>
+            <button class="button next">
+                <i class="fas fa-step-forward"></i>&nbsp&nbsp Next
+            </button>
+            <button class="button stop">
+                <i class="fas fa-stop"></i>&nbsp&nbsp Stop
+            </button>
+            <button class="button random">
+                <i class="fas fa-random"></i>&nbsp&nbsp Random
+            </button>
+            <button class="button clear">
+                <i class="fas fa-broom"></i>&nbsp Clear
+            </button>
+        </div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"
+        integrity="sha512-F5QTlBqZlvuBEs9LQPqc1iZv2UMxcVXezbHzomzS6Df4MZMClge/8+gXrKw2fl5ysdk4rWjR0vKS7NNkfymaBQ=="
+        crossorigin="anonymous"></script>
     <script src="script.js"></script>
-  </body>
+</body>
+
 </html>
